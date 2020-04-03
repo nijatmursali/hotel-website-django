@@ -1,0 +1,359 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+
+
+
+<!-- Breadcrumb -->
+<div class="breadcrumb-area section" style="background-color: black;">
+    <div class="container">
+        <div class="breadcrumb pt-75 pb-75 pt-sm-70 pb-sm-40 pt-xs-70 pb-xs-40">
+            <div class="row">
+                <div class="col">
+                    <h2>Properties</h2>
+                    <!-- breadcrumb-list start -->
+                    <ul class="breadcrumb-list">
+                        <li class="breadcrumb-item"><a href="/">Home</a></li>
+                        <li class="breadcrumb-item active"><a href="{% url 'property:property_list' %}">Properties</a></li>
+                        
+                    </ul>
+                    <!-- breadcrumb-list end -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--// Breadcrumb -->
+    
+<!-- Page Conttent -->
+<main class="page-content section"> 
+   
+    <!-- Featured Properites Start -->   
+    <div class="properites-sidebar-wrap pt-110 pt-md-90 pt-sm-70 pt-xs-60 pb-110 pb-md-90 pb-sm-70 pb-xs-60">
+        <div class="container">
+            
+            <div class="row">
+                <div class="col">
+                    <ul class="properties-list nav justify-content-start" role="tablist">
+                       <li class="active"><a class="active" href="#all" role="tab" data-toggle="tab">ALL</a></li>
+                       <li><a href="#buy"  role="tab" data-toggle="tab">FOR BUY</a></li>
+                       <li><a href="#sale"  role="tab" data-toggle="tab">FOR SALE</a></li>
+                       <li><a href="#rent"  role="tab" data-toggle="tab">FOR RENT</a></li>
+                    </ul>
+                </div>
+            </div>
+           
+            <div class="row">
+                <div class="col-lg-4 col-xl-3 col-12 order-lg-2 order-2">
+                    <div class="row widgets">
+                       
+                        <div class="col-lg-12">
+                            <div class="single-widget widget-search">
+                                <h4 class="widget-title">
+                                    <span>Find your home</span>
+                                </h4>
+                                <div class="search-wrap sidebar-wigets-search">
+                                    <form action="#">
+                                        <div class="row row-10">
+
+                                            <div class="col-lg-6 col-md-6 col-12 mb-20">
+                                                <select class="nice-select">
+                                                    <option>For Rent</option>
+                                                    <option>For Sale</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-12 mb-20">
+                                                <select class="nice-select">
+                                                    <option>Location </option>
+                                                    <option>Location 2</option>
+                                                    <option>Location 3</option>
+                                                    <option>Location 4</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-12 mb-20">
+                                                <select class="nice-select">
+                                                    <option>All Types</option>
+                                                    <option>Types One</option>
+                                                    <option>Types Two</option>
+                                                    <option>Types Three</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-12 mb-20">
+                                                <select class="nice-select">
+                                                    <option>Area(sqft)</option>
+                                                    <option>800(sqft)</option>
+                                                    <option>1200(sqft)</option>
+                                                    <option>1600(sqft)</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-12 mb-20">
+                                                <select class="nice-select">
+                                                    <option>Bedroom</option>
+                                                    <option>0 Bedroom</option>
+                                                    <option>1 Bedroom</option>
+                                                    <option>2 Bedroom</option>
+                                                    <option>3 Bedroom</option>
+                                                    <option>4 Bedroom</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-6 col-12 mb-20">
+                                                <select class="nice-select">
+                                                    <option>Bathroom</option>
+                                                    <option>0 Bathroom</option>
+                                                    <option>1 Bathroom</option>
+                                                    <option>2 Bathroom</option>
+                                                    <option>3 Bathroom</option>
+                                                    <option>4 Bathroom</option>
+                                                </select>
+                                            </div>
+
+                                            <div class="col-lg-8 ml-auto mr-auto col-12 mb-20">
+                                                <div id="price-range"></div>
+                                            </div>
+
+                                            <div class="col-lg-12 col-md-6 col-12 mb-30">
+                                                <div class="serche-input-box  ml-auto mr-auto">
+                                                    <input type="submit" value="search">
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-12">
+                            <div class="single-widget widget">
+                                <h4 class="widget-title">
+                                    <span>New Added Property</span>
+                                </h4>
+                                <div class="row single-propertiy-wigets">
+                                    <div class="col-lg-12 col-md-6 single-propertiy mb-30">
+                                        <a href="#"><img src="assets/images/propertes/w-propertie-01.jpg" alt=""></a>
+                                        <div class="propertiy-det-box">
+                                            <h4><a href="#">Casel la Denver</a></h4>
+                                            <p>Price $1,09,000</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-6 single-propertiy mb-30">
+                                        <a href="#"><img src="assets/images/propertes/w-propertie-03.jpg" alt=""></a>
+                                        <div class="propertiy-det-box">
+                                            <h4><a href="#">White Smith Casel</a></h4>
+                                            <p>Price $1,03,000</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-6 single-propertiy mb-30">
+                                        <a href="#"><img src="assets/images/propertes/w-propertie-02.jpg" alt=""></a>
+                                        <div class="propertiy-det-box">
+                                            <h4><a href="#">Casel la Denver</a></h4>
+                                            <p>Price $1,08,000</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-12">
+                            <div class="single-widget widget">
+                               
+                                <h4 class="widget-title">
+                                    <span>Our Agent</span>
+                                </h4>
+                                
+                                <div class="our-widget-agent">
+                                    <div class="widget-agent">
+                                        <div class="image">
+                                            <a href="#"><img src="assets/images/agents/side-01.jpg" alt=""></a>
+                                        </div>
+                                        <div class="name">
+                                            <h5>Bayazid Smith</h5>
+                                        </div>
+                                    </div>
+                                    <div class="widget-agent">
+                                        <div class="image">
+                                            <a href="#"> <img src="assets/images/agents/side-02.jpg" alt=""></a>
+                                        </div>
+                                        <div class="name">
+                                            <h5>Bayazid Smith</h5>
+                                        </div>
+                                    </div>
+                                    <div class="widget-agent">
+                                        <div class="image">
+                                            <a href="#"><img src="images/agents/side-03.jpg" alt=""></a>
+                                        </div>
+                                        <div class="name">
+                                            <h5>Bayazid Smith</h5>
+                                        </div>
+                                    </div>
+                                    <div class="widget-agent">
+                                        <div class="image">
+                                            <a href="#"><img src="images/agents/side-04.jpg" alt=""></a>
+                                        </div>
+                                        <div class="name">
+                                            <h5>Bayazid Smith</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+
+                        
+                    </div>
+                </div>
+                <div class="col-lg-8 col-xl-9 col-12 order-lg-1 order-1">
+                   
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="all">
+                            <div class="row">
+                            {% for property in property_list  %}
+                                <div class="col-xl-4 col-lg-6 col-md-4 col-12">
+                                    <!-- single-property Start -->
+                                    <div class="single-property mt-30">
+                                        <div class="property-img">
+                                            <a href="{% url 'property:property_detail' property.id %}">
+                                                <img src="{{property.image.url}}" alt="">
+                                            </a>
+                                            <span class="level-stryker">{{property.type}}</span>
+                                        </div>
+                                        <div class="property-desc">
+                                            <h4><a href="{% url 'property:property_detail' property.id %}">{{property.name}} </a></h4>
+                                            <p>
+                                                <span class="location">22 First street, Chicago, USA</span>
+                                                <span class="property-info">{{property.area}} Sqft, {{property.beds_number}} Bed, {{property.baths_number}} Bath, {{property.garages_number}} Garage </span>
+                                            </p>
+                                            <div class="price-box">
+                                                <p>Price $ {{property.price}}</p>
+                                            </div>
+                                        </div>
+                                    </div><!-- single-property End -->
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="buy">
+                            <div class="row">
+                            {% for property in property_list  %}
+                            {% if property.type == 'B' %}
+                                <div class="col-xl-4 col-lg-6 col-md-4 col-12">
+                                    <!-- single-property Start -->
+                                    
+                                    <div class="single-property mt-30">
+                                        <div class="property-img">
+                                            <a href="{% url 'property:property_detail' property.id %}">
+                                                <img src="{{property.image.url}}" alt="">
+                                            </a>
+                                            <span class="level-stryker">FOR BUY</span>
+                                        </div>
+                                        <div class="property-desc">
+                                            <h4><a href="{% url 'property:property_detail' property.id %}">{{property.name}}</a></h4>
+                                            <p>
+                                                <span class="location">22 First street, Chicago, USA</span>
+                                                <span class="property-info">{{property.area}} Sqft, {{property.beds_number}} Bed, {{property.baths_number}} Bath, {{property.garages_number}} Garage </span>
+                                            </p>
+                                            <div class="price-box">
+                                                <p>Price $ {{property.price}}</p>
+                                            </div>
+                                        </div>
+                                    </div><!-- single-property End -->
+                                </div>
+                                
+                                {% endif %}
+                                
+                                {% endfor %}
+
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="sale">
+                            <div class="row">
+                            {% for property in property_list  %}
+                                {% if property.type == 'S' %}
+                                <div class="col-xl-4 col-lg-6 col-md-4 col-12">
+                                    <!-- single-property Start -->
+                                    <div class="single-property mt-30">
+                                        <div class="property-img">
+                                            <a href="{% url 'property:property_detail' property.id %}">
+                                                <img src="{{property.image.url}}" alt="">
+                                            </a>
+                                            <span class="level-stryker">FOR SALE</span>
+                                        </div>
+                                        <div class="property-desc">
+                                            <h4><a href="{% url 'property:property_detail' property.id %}">{{property.name}} </a></h4>
+                                            <p>
+                                                <span class="location">22 First street, Chicago, USA</span>
+                                                <span class="property-info">{{property.area}} Sqft, {{property.beds_number}} Bed, {{property.baths_number}} Bath, {{property.garages_number}} Garage </span>
+                                            </p>
+                                            <div class="price-box">
+                                                <p>Price $ {{property.price}}</p>
+                                            </div>
+                                        </div>
+                                    </div><!-- single-property End -->
+                                </div>
+                                {% endif %}
+                                
+                                {% endfor %}
+
+
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="rent">
+                            <div class="row">
+                            {% for property in property_list  %}
+                                {% if property.type == 'R' %}
+                                <div class="col-xl-4 col-lg-6 col-md-4 col-12">
+                                    <!-- single-property Start -->
+                                    <div class="single-property mt-30">
+                                        <div class="property-img">
+                                            <a href="{% url 'property:property_detail' property.id %}">
+                                                <img src="{{property.image.url}}" alt="">
+                                            </a>
+                                            <span class="level-stryker">FOR RENT</span>
+                                        </div>
+                                        <div class="property-desc">
+                                            <h4><a href="properties-details.html">{{property.name}}</a></h4>
+                                            <p>
+                                                <span class="location">22 First street, Chicago, USA</span>
+                                                <span class="property-info">{{property.area}} Sqft, {{property.beds_number}} Bed, {{property.baths_number}} Bath, {{property.garages_number}} Garage  </span>
+                                            </p>
+                                            <div class="price-box">
+                                                <p>Price $ {{property.price}}</p>
+                                            </div>
+                                        </div>
+                                    </div><!-- single-property End -->
+                                </div>
+                                {% endif %}
+                                
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row pt-40">
+                        <div class="col">
+                            <ul class="page-pagination">
+                                <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                <li class="active"><a href="#">01</a></li>
+                                <li><a href="#">02</a></li>
+                                <li><a href="#">03</a></li>
+                                <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div><!-- Featured Properites End -->  
+
+</main>
+<!--// Page Conttent -->
+
+{% endblock body %}
